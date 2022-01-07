@@ -28,15 +28,15 @@ $('#btnRegistrar').on('click', function() {
 
     // Valido datos de entrada y seleccióm
     const errores = [];
-    if (nombre_animal = "") {
+    if (nombre_animal == "") {
         errores.push("Debe seleccionar un Animal");
     } 
 
-    if (rangoanios = "") {
+    if (rangoanios == "") {
         errores.push("Debe seleccionar Rango de Edad");
     } 
 
-    if (comentarios = "") {
+    if (comentarios == "") {
         errores.push("Debe ingresar comentario");
     } 
     
@@ -66,11 +66,14 @@ $('#btnRegistrar').on('click', function() {
 // Funcion para dibujat animal a registrar
 function dibujoanimales(nuevo_animal) {
     $('#Animales').append(`
-        <div class="card m-1 bg-secondary" style="max-width: 12rem">
+        <div class="card m-1 bg-secondary" style="max-width: 08rem">
             <img src="${nuevo_animal.img}" class="card-img-top" alt="animal">
             <div class="card-body py-1”>
-            <button type="button" class="btn btn-outline-light">Light</button>
+            <button type="button"> <img src="assets/imgs/audio.svg" height ="40" width="40" /></button>          
             </div>
         </div>
     `)
 }
+
+//<button type="button"> <img src="assets/imgs/audio" height ="80" width="100" /></button>
+//<button type="button" class="btn btn-outline-light">Light</button>
