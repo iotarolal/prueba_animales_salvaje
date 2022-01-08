@@ -60,20 +60,28 @@ $('#btnRegistrar').on('click', function() {
                     }
 
 // Llamo a la Funcion para dibujar el animal a registrar
+//    arraydeimageneesregistradas.push(nombre_animal)
     dibujoanimales(nuevo_animal);   
+
+    $('#animal').prop('selectedIndex',0);
+    $('#edad').prop('selectedIndex',0);
+    $('#comentarios').html('');
+
 })
 
 // Funcion para dibujat animal a registrar
 function dibujoanimales(nuevo_animal) {
+
     $('#Animales').append(`
         <div class="card m-1 bg-secondary" style="max-width: 08rem">
             <img src="${nuevo_animal.img}" class="card-img-top" alt="animal">
             <div class="card-body py-1”>
-            <button type="button"> <img src="assets/imgs/audio.svg" height ="40" width="40" /></button>          
+            <button type = "button" class="${nuevo_animal.name}"> <img src="assets/imgs/audio.svg" height ="40" width="40"/></button>          
             </div>
         </div>
     `)
 }
 
-//<button type="button"> <img src="assets/imgs/audio" height ="80" width="100" /></button>
-//<button type="button" class="btn btn-outline-light">Light</button>
+$('.Leon').on('click', function() {
+    nuevo_animal.rugir();
+})
