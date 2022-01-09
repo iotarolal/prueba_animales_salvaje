@@ -15,6 +15,7 @@ import {Leon, Lobo, Oso, Serpiente, Aguila} from './Animales.js'
 
     })
 
+    console.log(animal)
 })()  // IIFE (Funciones Inmediatamente Ejecutadas)
 
 const animales = [];
@@ -59,7 +60,10 @@ $('#btnRegistrar').on('click', function() {
                     }
 
 // Llamo a la Funcion para dibujar el animal a registrar
+    console.log("entre a registrar")                    
     animales.push(nuevo_animal);
+    nuevo_animal.rugir;
+    console.log(animales);
     dibujoanimales(animales);   
 
     $('#animal').prop('selectedIndex',0);
@@ -67,8 +71,6 @@ $('#btnRegistrar').on('click', function() {
     $('#comentarios').html('');
 
 })
-
-
 
 // Funcion para dibujat animal a registrar
 function dibujoanimales(animales) {
@@ -78,23 +80,13 @@ function dibujoanimales(animales) {
     for (const animal of animales) {
         console.log(`${animal.img}`)
         $('#Animales').append(`
-        <div class="card m-1 bg-secondary" style="max-width: 08rem">
-        <img src="${animal.img}" class="card-img-top" alt="animal">
-        <div class="card-body py-1">
-        <button onclick="" type="button"><img src="assets/imgs/audio.svg" height ="40" width="40"/></button>          
-        </div>
-        </div>
+            <div class="card m-1 bg-secondary" style="max-width: 08rem">
+                <img src="${animal.img}" class="card-img-top" alt="animal">
+                <div class="card-body py-1”>
+                    <button type="button"> <img src="assets/imgs/audio.svg" height ="40" width="40"/></button>          
+                </div>
+            </div>
         `)
         i ++
     }
 }
-
-    
-function playAudio() {
-}
-
-//  <button onclick="playAudio()" type="button"><img src="assets/imgs/audio.svg" height ="40" width="40"/></button>          
-
-//<button onclick="sonar(1)"><img src="assets/imgs/audio.svg" height ="40" width="40"/></button>          
-
-//<button type="button"> <img src="assets/imgs/audio.svg" height ="40" width="40"/></button>          
