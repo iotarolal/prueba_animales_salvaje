@@ -64,7 +64,7 @@ $('#btnRegistrar').on('click', function() {
 
     $('#animal').prop('selectedIndex',0);
     $('#edad').prop('selectedIndex',0);
-    $('#comentarios').html('');
+    $('#comentarios').val('');
 
 })
 
